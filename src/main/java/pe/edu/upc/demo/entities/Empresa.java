@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Empresa {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int idEmpresa;
 
 	@Column(name = "nombreEmpresa", nullable = false, length = 47)
