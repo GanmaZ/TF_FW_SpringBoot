@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Empresa {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int idEmpresa;
 
 	@Column(name = "nombreEmpresa", nullable = false, length = 47)
@@ -117,6 +117,6 @@ public class Empresa {
 	public void setClaveEmpresa(String claveEmpresa) {
 		this.claveEmpresa = claveEmpresa;
 	}
-	//airt
+	//airton
 
 }
