@@ -33,8 +33,22 @@
 							style="color: #fdfdfd"> prueba </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item" th:href="@{}">Registrar</a></li>
-								<li><a class="dropdown-item" th:href="@{}">Listar</a></li>
+								<li><a class="dropdown-item" th:href="@{/empresas/nuevo}">Registrar</a></li>
+								<li><a class="dropdown-item" th:href="@{/empresas/listar}">Listar</a></li>
+							</ul></li>
+					</ul>
+				</div>
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+						<li class="nav-item dropdown"><a
+							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+							role="button" data-bs-toggle="dropdown" aria-expanded="false"
+							style="color: #fdfdfd"> Empresas </a>
+							<ul class="dropdown-menu"
+								aria-labelledby="navbarDropdownMenuLink">
+								<li><a class="dropdown-item" th:href="@{/empresas/nuevo}">Registrar Empresa</a></li>
+								<li><a class="dropdown-item" th:href="@{/empresas/listar}">Listar Empresa</a></li>
 							</ul></li>
 					</ul>
 				</div>
