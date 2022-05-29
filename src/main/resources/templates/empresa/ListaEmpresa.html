@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="master/master :: head">
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<header th:replace="master/master :: header"></header>
+	<div class="container">
+		<div>
+			<div class="table-responsive"></div>
+
+			<table class="table table-white">
+
+				<thead>
+					<tr>
+						<th scope="col">ID</th>
+						<th scope="col">Nombre</th>
+						<th scope="col">RUC</th>
+						<th scope="col">Sede</th>
+						<th scope="col">Telefono</th>
+						<th scope="col">Direccion</th>
+						<th scope="col">Correo</th>
+						<th scope="col">Clave</th>
+						<th>Operación</th>
+						<th>Lista</th>
+
+					</tr>
+
+				</thead>
+				<tbody>
+					<tr th:each="empresa : ${listaEmpresas}">
+						<td th:text="${empresa.idEmpresa}"></td>
+						<td th:text="${empresa.nombreEmpresa}"></td>
+						<td th:text="${empresa.ruc}"></td>
+						<td th:text="${empresa.sedeEmpresa}"></td>
+						<td th:text="${empresa.telefonoEmpresa}"></td>
+						<td th:text="${empresa.direccionEmpresa}"></td>
+						<td th:text="${empresa.correoEmpresa}"></td>
+						<td th:text="${empresa.claveEmpresa}"></td>
+						<td><a
+							th:href="@{/empresas/eliminar?id=}+${empresa.idEmpresa}">
+								Eliminar </a></td>
+
+						<td><a
+							th:href="@{'/empresas/irmodificar/'+${empresa.idEmpresa}}">
+								Actualizar </a></td>
+
+
+
+
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</body>
+</html>

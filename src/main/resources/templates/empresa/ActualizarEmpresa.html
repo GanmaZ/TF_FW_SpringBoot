@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="master/master :: head">
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<header th:replace="master/master :: header"></header>
+	<div class="container">
+		<div>
+			<form th:action="@{/empresas/modificar}" th:object="${emps}"
+				method="post">
+				<div class="col-sm-12">
+					<label class="form-label">Id: </label> <input type="text"
+						th:field="*{idEmpresa}" class="form-control"></input>
+				</div>
+
+				<div class="col-sm-12">
+					<label class="form-label">Nombre de Empresa: </label> <input
+						type="text" th:field="*{nombreEmpresa}" class="form-control"></input>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label">Numero de Ruc de Empresa: </label> <input
+						type="text" th:field="*{ruc}" class="form-control"></input>
+				</div>
+
+				<div class="col-sm-12">
+					<label class="form-label">Sede de la empresa: </label> <input
+						type="text" th:field="*{sedeEmpresa}" class="form-control"></input>
+				</div>
+
+				<div class="col-sm-12">
+					<label class="form-label">Telefono de la empresa: </label> <input
+						type="text" th:field="*{telefonoEmpresa}" class="form-control"></input>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label">Direccion de la empresa: </label> <input
+						type="text" th:field="*{direccionEmpresa}" class="form-control"></input>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label">Correo de la empresa: </label> <input
+						type="text" th:field="*{correoEmpresa}" class="form-control"></input>
+				</div>
+				<div class="col-sm-12">
+					<label class="form-label">Clave de la empresa: </label> <input
+						type="text" th:field="*{claveEmpresa}" class="form-control"></input>
+				</div>
+				<div class="col-sm-12">
+					<input type="submit" value="Actualizar" class="btn btn-dark"></input>
+				</div>
+
+
+			</form>
+		</div>
+
+	</div>
+
+</body>
+</html>
