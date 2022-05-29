@@ -44,5 +44,5 @@ public class Talla {
 		this.nombreTalla = nombreTalla;
 	}
 
-	//talla
+	
 }
