@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="UTF-8">
-<title>ListarTipoProducto</title>
+<title>Listar tallas</title>
 </head>
 <body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
@@ -11,19 +11,19 @@
 		<table class="table table-primary">
 			<thead class="table-dark">
 				<tr>
-					<th>Id</th>
-					<th>Tipo</th>
+					<th>ID</th>
+					<th>Nombre</th>
 					<th>Operación</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="a:${listaTipoProductos}">
-					<td th:text="${a.idTipoProducto}"></td>
-					<td th:text="${a.NombreTipoProducto}"></td>
+				<tr th:each="talla : ${listaTallas}">
+					<td th:text="${talla.idTalla}"></td>
+					<td th:text="${talla.nombreTalla}"></td>
 					<td><a class="btn btn-primary"
-						th:href="@{'/tipoproductos/irmodificar/'+${a.idTipoProducto}}">Editar</a>
+						th:href="@{'/tallas/irmodificar/'+${talla.idTalla}}">Editar</a>
 						&nbsp; <a class="btn btn-danger"
-						th:href="@{/tipoproductos/eliminar?id=}+${a.idTipoProducto}">Eliminar</a></td>
+						th:href="@{/tallas/eliminar?id=}+${talla.idTalla}">Eliminar</a></td>
 				</tr>
 			</tbody>
 		</table>
