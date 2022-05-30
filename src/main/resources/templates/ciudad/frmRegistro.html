@@ -2,21 +2,23 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="ISO-8859-1">
+<title>Registrar Ciudad</title>
 </head>
 <body>
 	<header th:replace="master/master :: header"></header>
+	<br>
 	<div class="container">
 		<div>
 
 			<form th:action="@{/ciudades/guardar}" th:object="${c}" method="post">
 				<div class="col-sm-12">
 					<label class="form-label">Id: </label> <input type="text"
-						th:field="*{idCiudad}" class="form control"></input>
+						th:field="*{idCiudad}" class="form control" readonly="readonly"></input>
 				</div>
 
 				<div class="col-sm-12">
 					<label class="form-label">Nombre: </label> <input type="text"
-						th:field="*{NameCiudad}" class="form control"></input>
+						th:field="*{NameCiudad}" class="form control" required="required"></input>
 				</div>
 				
 				<div class="col-sm-12">
