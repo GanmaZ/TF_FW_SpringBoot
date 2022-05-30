@@ -21,16 +21,16 @@ public class MarcaController {
 
 	@GetMapping("/nuevo")
 	public String newMarca(Model model) {
-		model.addAttribute("m", new Marca());
+		model.addAttribute("marca", new Marca());
 		return "marca/frmRegistro";
 	}
 
 	@PostMapping("/guardar")
-	public String saveMarca(@Valid Marca mar, BindingResult binRes, Model model) {
+	public String saveMarca(@Valid Marca marca, BindingResult binRes, Model model) {
 		if (binRes.hasErrors()) {
 			return "marca/frmRegistro";
 		} else {
-			marService.Insert(mar);
+			marService.Insert(marca);
 			model.addAttribute("mensaje", "Se registro correctamente!!");
 			return "redirect:/marcas/nuevo";
 		}
