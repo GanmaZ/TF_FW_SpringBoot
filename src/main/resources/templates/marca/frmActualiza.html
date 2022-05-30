@@ -2,11 +2,11 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Editar marca</title>
 </head>
 <body>
 	<header th:replace="master/master :: header"></header>
-
+	<br>
 	<div class="container">
 		<div>
 			<form th:action="@{/marcas/modificar}" th:object="${marca}"
@@ -22,8 +22,7 @@
 				</div>
 				<div class="col-sm-12">
 					<label class="form-label">Descripcion de Marca:</label> <input
-						type="text" th:field="*{descripcionMarca}"
-						class="form-control"></input>
+						type="text" th:field="*{descripcionMarca}" class="form-control"></input>
 				</div>
 
 				<div class="col-sm-12">

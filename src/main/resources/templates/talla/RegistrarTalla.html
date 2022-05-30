@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Registrar talla</title>
 </head>
 <body>
 	<header th:replace="master/master :: header"></header>
@@ -11,14 +11,13 @@
 			<form th:action="@{/tallas/guardar}" th:object="${emp}" method="post">
 				<div class="col-sm-12">
 					<label class="form-label">Id: </label> <input type="text"
-						th:field="*{idTalla}" class="form-control"
-						placeholder="Digite su id"></input>
+						th:field="*{idTalla}" class="form-contro" readonly="readonly"></input>
 				</div>
 
 				<div class="col-sm-12">
 					<label class="form-label">Nombre de Talla: </label> <input
 						type="text" th:field="*{nombreTalla}" class="form-control"
-						placeholder="Digite su nombre"></input>
+						placeholder="Digite su nombre" required="required"></input>
 				</div>
 
 				<div class="col-sm-12">

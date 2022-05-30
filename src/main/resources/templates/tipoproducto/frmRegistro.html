@@ -6,6 +6,7 @@
 </head>
 <body>
 	<header th:replace="master/master :: header"></header>
+	<br>
 	<div class="container">
 		<div>
 
@@ -13,12 +14,14 @@
 				method="post">
 				<div class="col-sm-12">
 					<label class="form-label">Id: </label> <input type="text"
-						th:field="*{idTipoProducto}" class="form-control"></input>
+						th:field="*{idTipoProducto}" class="form-control"
+						readonly="readonly"></input>
 				</div>
 
 				<div class="col-sm-12">
 					<label class="form-label">Tipo de Producto: </label> <input
-						type="text" th:field="*{NombreTipoProducto}" class="form-control"></input>
+						type="text" th:field="*{NombreTipoProducto}" class="form-control"
+						required="required"></input>
 				</div>
 
 
