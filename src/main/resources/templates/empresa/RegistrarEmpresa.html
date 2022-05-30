@@ -22,7 +22,8 @@
 				<div class="col-sm-5">
 					<label class="form-label">Nombre de Empresa: </label> <input
 						type="text" th:field="*{nombreEmpresa}" class="form-control"
-						placeholder="Digite el nombre de su empresa" required="required"></input>
+						placeholder="Digite el nombre de su empresa" pattern="[A-Za-z]+"
+						required="required"></input>
 				</div>
 				<div class="col-sm-5">
 					<label class="form-label">Numero de Ruc de Empresa: </label> <input
@@ -51,8 +52,9 @@
 				</div>
 				<div class="col-sm-5">
 					<label class="form-label">Correo de la empresa: </label> <input
-						type="text" th:field="*{correoEmpresa}" class="form-control"
-						placeholder="Digite su correo" required="required"></input>
+						type="email" th:field="*{correoEmpresa}" class="form-control"
+						placeholder="Digite su correo" required="required"
+						pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}"></input>
 				</div>
 				<div class="col-sm-5">
 					<label class="form-label">Clave de la empresa: </label> <input
@@ -67,10 +69,10 @@
 		</div>
 	</div>
 	<br>
-		<br>
-			<br>
-				<br>
-					<br>
+	<br>
+	<br>
+	<br>
+	<br>
 	<footer th:replace="master/master :: footer"></footer>
 
 </body>

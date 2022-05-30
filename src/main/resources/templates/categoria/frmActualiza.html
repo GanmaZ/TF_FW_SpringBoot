@@ -11,17 +11,17 @@
 		<div>
 			<form th:action="@{/categorias/modificar}" th:object="${cats}"
 				method="post">
-				
+
 				<div class="col-sm-5">
 					<label class="form-label">Id:</label> <input type="text"
 						th:field="*{IdCategoria}" class="form-control" readonly="readonly"></input>
 				</div>
-				
 				<div class="col-sm-5">
 					<label class="form-label">Nombre de Categoria:</label> <input
 						type="text" th:field="*{NombreCategoria}" class="form-control"
-						required="required"></input>
+						required="required" pattern="[A-Za-z]+"></input>
 				</div>
+
 				<div class="col-sm-5">
 					<label class="form-label">Descripcion de Categoria:</label> <input
 						type="text" th:field="*{DescripcionCategoria}"
