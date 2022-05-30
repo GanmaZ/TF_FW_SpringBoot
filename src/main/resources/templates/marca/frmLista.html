@@ -2,43 +2,36 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Listar marcas</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
 
-	<div class="container">
-		<div>
-			<div class="table-responsive">
-				<table class=" table table-white">
-
-					<thead>
-						<tr>
-							<th>Id</th>
-							<th>Nombre</th>
-							<th>Descripcion</th>
-							<th>Operacion</th>
-							<th>Operacion</th>
-						</tr>
-					</thead>
-					<tbody>
-						<tr th:each="a:${listaMarcas}">
-							<td th:text="${a.idMarca}"></td>
-							<td th:text="${a.nombreMarca}"></td>
-							<td th:text="${a.descripcionMarca}"></td>
-							<td><a th:href="@{/marcas/eliminar?id=}+${a.idMarca}">Eliminar </a></td>
-							<td><a th:href="@{'/marcas/irmodificar/'+${a.idMarca}}">Modificar </a></td>
-
-
-						</tr>
-					</tbody>
-
-				</table>
-
-			</div>
-
-		</div>
-
+	<br>
+	<div class="container text-center">
+		<table class="table table-primary">
+			<thead class="table-dark">
+				<tr>
+					<th>Id</th>
+					<th>Nombre</th>
+					<th>Descripcion</th>
+					<th>Operacion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="a:${listaMarcas}">
+					<td th:text="${a.idMarca}"></td>
+					<td th:text="${a.nombreMarca}"></td>
+					<td th:text="${a.descripcionMarca}"></td>
+					<td><a class="btn btn-primary"
+						th:href="@{'/marcas/irmodificar/'+${a.idMarca}}">Editar</a> &nbsp;
+						<a class="btn btn-danger"
+						th:href="@{/marcas/eliminar?id=}+${a.idMarca}">Eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>
