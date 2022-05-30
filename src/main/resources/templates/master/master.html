@@ -35,7 +35,7 @@
 					th:src="@{/images/logo.png}" width="150" height="70"></a>
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
@@ -44,7 +44,8 @@
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/categorias/nueva}">Registrar</a></li>
-								<li><a class="dropdown-item" th:href="@{/categorias/listar}">Listar</a></li>
+								<li><a class="dropdown-item"
+									th:href="@{/categorias/listar}">Listar</a></li>
 							</ul></li>
 
 						<li class="nav-item dropdown"><a
@@ -85,11 +86,9 @@
 							style="color: #252A34"> Ciudad </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
-								<li><a class="dropdown-item"
-									th:href="@{/ciudades/nuevo}">Registrar</a></li>
-								<li><a class="dropdown-item"
-									th:href="@{/ciudades/listar}">Listar</a></li>
-
+								<li><a class="dropdown-item" th:href="@{/ciudades/nuevo}">Registrar</a></li>
+								<li><a class="dropdown-item" th:href="@{/ciudades/listar}">Listar</a></li>
+							</ul></li>
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -98,7 +97,7 @@
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/marcas/nuevo}">Registrar</a></li>
 								<li><a class="dropdown-item" th:href="@{/marcas/listar}">Listar</a></li>
-                
+
 							</ul></li>
 					</ul>
 				</div>
