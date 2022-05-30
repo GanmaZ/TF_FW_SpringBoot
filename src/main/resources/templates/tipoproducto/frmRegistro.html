@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Registrar TipoProducto</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
 	<br>
 	<div class="container">
@@ -12,25 +12,27 @@
 
 			<form th:action="@{/tipoproductos/guardar}" th:object="${p}"
 				method="post">
-				<div class="col-sm-12">
+				<!--
+				<div class="col-sm-5">
 					<label class="form-label">Id: </label> <input type="text"
 						th:field="*{idTipoProducto}" class="form-control"
 						readonly="readonly"></input>
 				</div>
-
-				<div class="col-sm-12">
+-->
+				<div class="col-sm-5">
 					<label class="form-label">Tipo de Producto: </label> <input
-						type="text" th:field="*{NombreTipoProducto}" class="form-control"
+						type="text" th:field="*{NombreTipoProducto}" class="form-control" placeholder="Digite el tipo"
 						required="required"></input>
 				</div>
-
-
-				<div class="col-sm-12">
+				<br>
+				<div class="col-sm-5">
 					<input type="submit" value="Registrar" class="btn btn-dark"></input>
 				</div>
 
 			</form>
 		</div>
 	</div>
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>

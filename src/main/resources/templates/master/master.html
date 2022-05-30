@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF8">
 <title>Fast Wear</title>
 <link
 	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
 	rel="stylesheet"
 	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="css/style.css">
 <script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -25,22 +24,23 @@
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 	crossorigin="anonymous"></script>
+	
 </head>
-<body>
+<body >
 	<header th:fragment="header" class="header">
 
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<nav class="navbar navbar-expand-lg navbar-dark shadow-5-strong" style="background-color: rgba(0, 0, 0, 0.05);">
 			<div class="container-fluid">
 				<a class="navbar-brand" href="#"><img
 					th:src="@{/images/logo.png}" width="150" height="70"></a>
 
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Categoria </a>
+							style="color: #FFFFFF"> Categoria </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/categorias/nueva}">Registrar</a></li>
@@ -51,7 +51,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Empresa </a>
+							style="color: #FFFFFF"> Empresa </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/empresas/nuevo}">Registrar</a></li>
@@ -61,7 +61,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Talla </a>
+							style="color: #FFFFFF"> Talla </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/tallas/nuevo}">Registrar</a></li>
@@ -71,7 +71,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Tipos de Producto </a>
+							style="color: #FFFFFF"> Tipos de Producto </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item"
@@ -83,7 +83,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Ciudad </a>
+							style="color: #FFFFFF"> Ciudad </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/ciudades/nuevo}">Registrar</a></li>
@@ -92,7 +92,7 @@
 						<li class="nav-item dropdown"><a
 							class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
 							role="button" data-bs-toggle="dropdown" aria-expanded="false"
-							style="color: #252A34"> Marcas </a>
+							style="color: #FFFFFF"> Marcas </a>
 							<ul class="dropdown-menu"
 								aria-labelledby="navbarDropdownMenuLink">
 								<li><a class="dropdown-item" th:href="@{/marcas/nuevo}">Registrar</a></li>
@@ -104,9 +104,12 @@
 			</div>
 		</nav>
 	</header>
-	<div class="container py4"></div>
-	<footer th:fragment="footer" class="container">
-		<p>Fast Wear</p>
+
+	<footer class="text-center text-lg-start bg-light text-muted fixed-bottom">
+		<div class="text-center p-4"
+			style="background-color: rgba(0, 0, 0, 0.05);">
+			© 2021 Copyright:<a class="text-reset fw-bold" href="#">Fast Wear</a>
+		</div>
 	</footer>
 </body>
 </html>

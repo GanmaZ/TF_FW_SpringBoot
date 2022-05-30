@@ -4,25 +4,26 @@
 <meta charset="ISO-8859-1">
 <title>Registrar Ciudad</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
 	<br>
 	<div class="container">
 		<div>
 
 			<form th:action="@{/ciudades/guardar}" th:object="${c}" method="post">
-				<div class="col-sm-12">
+				<!--
+				<div class="col-sm-5">
 					<label class="form-label">Id: </label> <input type="text"
-						th:field="*{idCiudad}" class="form control" readonly="readonly"></input>
+						th:field="*{idCiudad}" class="form-control" readonly="readonly"></input>
 				</div>
-
-				<div class="col-sm-12">
+				-->
+				<div class="col-sm-5">
 					<label class="form-label">Nombre: </label> <input type="text"
-						th:field="*{NameCiudad}" class="form control" required="required"></input>
+						th:field="*{NameCiudad}" class="form-control" placeholder="Digite la ciudad" required="required"></input>
 				</div>
-				
-				<div class="col-sm-12">
-				<input type="submit" value="Registrar" class="btn btn-dark"></input>
+				<br>
+				<div class="col-sm-5">
+					<input type="submit" value="Registrar" class="btn btn-dark"></input>
 				</div>
 
 			</form>
@@ -30,5 +31,7 @@
 		</div>
 
 	</div>
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>
