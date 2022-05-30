@@ -9,7 +9,7 @@
 
 	<div class="container">
 		<div>
-			<form th:action="@{/marcas/guardar}" th:object="${marca}"
+			<form th:action="@{/marcas/modificar}" th:object="${marca}"
 				method="post">
 				<div class="col-sm-12">
 					<label class="form-label">Id:</label> <input type="text"
@@ -27,7 +27,7 @@
 				</div>
 
 				<div class="col-sm-12">
-					<input type="submit" value="Registrar" class="btn btn-dark"></input>
+					<input type="submit" value="Actualizar" class="btn btn-dark"></input>
 				</div>
 			</form>
 		</div>
