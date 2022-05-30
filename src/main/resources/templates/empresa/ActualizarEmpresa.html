@@ -4,7 +4,7 @@
 <meta charset="ISO-8859-1">
 <title>Editar Empresa</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 
 	<header th:replace="master/master :: header"></header>
 	<br>
@@ -16,7 +16,7 @@
 					<label class="form-label">Id: </label> <input type="text"
 						th:field="*{idEmpresa}" class="form-control" readonly="readonly"></input>
 				</div>
-				
+
 				<div class="col-sm-12">
 					<label class="form-label">Nombre de Empresa: </label> <input
 						type="text" th:field="*{nombreEmpresa}" class="form-control"
@@ -56,7 +56,7 @@
 						type="text" th:field="*{claveEmpresa}" class="form-control"
 						placeholder="Digite su clave" required="required"></input>
 				</div>
-
+				<br>
 				<div class="col-sm-12">
 					<input type="submit" value="Actualizar" class="btn btn-dark"></input>
 				</div>
@@ -66,6 +66,7 @@
 		</div>
 
 	</div>
-
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>

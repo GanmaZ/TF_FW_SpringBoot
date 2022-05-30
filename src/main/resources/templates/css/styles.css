@@ -1,9 +1,0 @@
-@charset "ISO-8859-1";
-
-.header {
-	background-image: url(images/banner-img.jpg) no-repeat center;
-}
-
-.header .navbar{
-	background:transparent !important;
-}

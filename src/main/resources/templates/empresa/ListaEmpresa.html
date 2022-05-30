@@ -4,12 +4,12 @@
 <meta charset="UTF-8">
 <title>Listar Empresas</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
 	<br>
 	<div class="container text-center">
-		<table class="table table-white">
-			<thead class="thead-dark">
+		<table class="table table-primary">
+			<thead class="table-dark">
 				<tr>
 					<th scope="col">ID</th>
 					<th scope="col">Nombre</th>
@@ -41,6 +41,7 @@
 			</tbody>
 		</table>
 	</div>
-
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>
