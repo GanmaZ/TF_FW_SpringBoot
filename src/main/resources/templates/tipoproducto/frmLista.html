@@ -4,38 +4,31 @@
 <meta charset="UTF-8">
 <title>ListarTipoProducto</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
-	<div class="container">
-		<div>
-			<div class="table-responsive">
-				<table class="table table-white">
-					<thead>
-					<tr>
-						<th>Id</th>
-						<th>Tipo</th>
-						<th>Operación</th>
-						<th>Operación</th>
-					</tr>	
-					</thead>
-					<tbody>
-						<tr th:each="a:${listaTipoProductos}">
-							<td th:text="${a.idTipoProducto}"></td>
-							<td th:text="${a.NombreTipoProducto}"></td>
-							
-							<td>
-							<a th:href="@{/tipoproductos/eliminar?id=}+${a.idTipoProducto}"> Eliminar
-							</a>
-							</td>
-							<td>
-							<a th:href="@{'/tipoproductos/irmodificar/'+${a.idTipoProducto}}">Actualizar
-							</a>
-							</td>
-						</tr>
-					</tbody>
-				</table>
-			</div>
-		</div>
+	<br>
+	<div class="container text-center">
+		<table class="table table-primary">
+			<thead class="table-dark">
+				<tr>
+					<th>Id</th>
+					<th>Tipo</th>
+					<th>Operación</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="a:${listaTipoProductos}">
+					<td th:text="${a.idTipoProducto}"></td>
+					<td th:text="${a.NombreTipoProducto}"></td>
+					<td><a class="btn btn-primary"
+						th:href="@{'/tipoproductos/irmodificar/'+${a.idTipoProducto}}">Editar</a>
+						&nbsp; <a class="btn btn-danger"
+						th:href="@{/tipoproductos/eliminar?id=}+${a.idTipoProducto}">Eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>

@@ -2,44 +2,33 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head th:replace="master/master :: head">
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Listar tallas</title>
 </head>
-<body>
+<body background="/images/banner-img.jpg">
 	<header th:replace="master/master :: header"></header>
-	<div class="container">
-		<div>
-			<div class="table-responsive"></div>
-
-			<table class="table table-white">
-
-				<thead>
-					<tr>
-						<th>ID</th>
-						<th>Nombre</th>
-						<th>Operación</th>
-						<th>Lista</th>
-
-					</tr>
-
-				</thead>
-				<tbody>
-					<tr th:each="talla : ${listaTallas}">
-						<td th:text="${talla.idTalla}"></td>
-						<td th:text="${talla.nombreTalla}"></td>
-
-						<td><a th:href="@{/tallas/eliminar?id=}+${talla.idTalla}">
-								Eliminar </a></td>
-
-						<td><a th:href="@{'/tallas/irmodificar/'+${talla.idTalla}}">
-								Actualizar </a></td>
-
-
-
-
-					</tr>
-				</tbody>
-			</table>
-		</div>
+	<br>
+	<div class="container text-center">
+		<table class="table table-primary">
+			<thead class="table-dark">
+				<tr>
+					<th>ID</th>
+					<th>Nombre</th>
+					<th>Operación</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="talla : ${listaTallas}">
+					<td th:text="${talla.idTalla}"></td>
+					<td th:text="${talla.nombreTalla}"></td>
+					<td><a class="btn btn-primary"
+						th:href="@{'/tallas/irmodificar/'+${talla.idTalla}}">Editar</a>
+						&nbsp; <a class="btn btn-danger"
+						th:href="@{/tallas/eliminar?id=}+${talla.idTalla}">Eliminar</a></td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
+	<br>
+	<footer th:replace="master/master :: footer"></footer>
 </body>
 </html>
