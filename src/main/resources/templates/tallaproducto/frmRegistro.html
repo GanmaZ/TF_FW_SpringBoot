@@ -21,7 +21,7 @@
 						th:field="*{idTallaProducto}" class="form-control" readonly="readonly"></input>
 				</div>
 -->
-				<div class="col-sm-12">
+				<div class="col-sm-5">
 					<label class="form-label">Talla: </label> <select
 						name="selectPerson" class="form-control"
 						th:field="*{talla.idTalla}">
@@ -30,7 +30,7 @@
 							th:selected="(${t.idTalla}==*{talla.idTalla})"></option>
 					</select>
 				</div>
-				<div class="col-sm-12">
+				<div class="col-sm-5">
 					<label class="form-label">Producto: </label> <select
 						name="selectPerson" class="form-control"
 						th:field="*{producto.IdProducto}">
